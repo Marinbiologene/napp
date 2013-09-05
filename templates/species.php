@@ -7,5 +7,10 @@
    <?php get_template_part('templates/species-meta-classification', get_post_format()); ?>
    <?php get_template_part('templates/species-meta-climate', get_post_format()); ?>
    <?php get_template_part('templates/species-meta-badge', get_post_format()); ?>
+   <?php 
+      if ( has_post_thumbnail() ) {
+        the_post_thumbnail('medium');
+      } 
+    ?>
  </div>
 </article>
