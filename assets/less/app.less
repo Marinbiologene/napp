@@ -57,6 +57,12 @@ body { }
   border-radius: @radius;
 }
 
+.box-shadow() {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
 .species-background(@icon) {
 
   background: url("../img/napp-icon_@{icon}.png") no-repeat (@species-padding/2); 
@@ -135,8 +141,19 @@ body { }
         }
       }
       
-      img.features {
-        
+      figure.featured {
+        margin: 0 0 (@line-height-computed / 2);
+      }
+      
+      figure.featured img {
+        padding: 4px;
+        .box-shadow();
+        border: @species-border;
+      }
+      
+      figure.featured figcaption {
+        padding: (@line-height-computed / 2);
+        font-size: @font-size-small;
       }
       
       img.env-badge {
