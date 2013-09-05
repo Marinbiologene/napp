@@ -8,11 +8,11 @@
 <?php endif; ?>
 
 <?php while (have_posts()) : the_post(); ?>
-
-
-
+  <?php if(get_post_type() == 'species') : ?>
+    <?php get_template_part('templates/species'); ?>
+  <?php else : ?>
     <?php get_template_part('templates/content', get_post_format()); ?>
-
+  <?php endif; ?>
 <?php endwhile; ?>
 
 <?php if ($wp_query->max_num_pages > 1) : ?>
