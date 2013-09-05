@@ -57,6 +57,19 @@ body { }
   border-radius: @radius;
 }
 
+.species-background(@icon) {
+
+  background: url("../img/napp-icon_@{icon}.png") no-repeat (@species-padding/2); 
+  background-size: 40px 56px;
+  
+  @media 
+  (-webkit-min-device-pixel-ratio: 2), 
+  (min-resolution: 192dpi) { 
+    background-image: url("../img/napp-icon@2x_@{icon}.png");
+  
+  }
+}
+
 @species-border: 1px solid @table-border-color;
 @species-icon-width: 40px;
 @species-padding: 24px;
@@ -64,16 +77,13 @@ body { }
 .species-collection { 
 
   .border-radius(@border-radius-base);
-  
   border: @species-border;
   
   li {
   
     > a {
-    
-      color: @gray-dark;
       
-      background: url('../img/napp-icon_maybe.png') no-repeat (@species-padding/2); 
+      color: @gray-dark;
     
       font-size: ceil(@font-size-base * 1.5);
       line-height: ceil(@font-size-base * 1.6);
@@ -90,6 +100,18 @@ body { }
         vertical-align: middle;
       }
       
+      &.Green {
+        .species-background("yes");
+      }
+      
+      &.Orange {
+        .species-background("maybe");
+      }
+      
+      &.Red {
+        .species-background("no");
+      }
+      
     }
     
     > a:hover {
@@ -99,6 +121,19 @@ body { }
     article {
       padding: @species-padding;
       border-top: @species-border;
+      
+      blockquote p {
+        font-size: @font-size-base;
+        
+        strong {
+          font-size: @font-size-small;
+          font-weight: normal;
+        }
+        
+        strong:before {
+          content: "— "
+        }
+      }
     }
             
   }
