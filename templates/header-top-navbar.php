@@ -10,12 +10,18 @@
       <a class="navbar-brand" href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a>
     </div>
 
-    <nav class="collapse navbar-collapse" role="navigation">
-      <?php
-        if (has_nav_menu('primary_navigation')) :
-          wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'));
-        endif;
-      ?>
-    </nav>
+   <nav class="collapse navbar-collapse navbar-collapse" role="navigation">
+   <?php
+     if (has_nav_menu('left_main_navigation')) :
+       wp_nav_menu(array('theme_location' => 'left_main_navigation', 'menu_class' => 'nav navbar-nav navbar-left'));
+     endif;
+   ?>
+                   
+   <?php
+     if (has_nav_menu('right_main_navigation')) :
+       wp_nav_menu(array('theme_location' => 'right_main_navigation', 'menu_class' => 'nav navbar-nav navbar-right'));
+     endif;
+   ?>
+   </nav>
   </div>
 </header>

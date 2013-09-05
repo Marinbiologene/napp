@@ -4,13 +4,12 @@
  </header>
  <div class="entry-content">
    <?php the_content(); ?>
-   <?php get_template_part('templates/species-meta-classification', get_post_format()); ?>
-   <?php get_template_part('templates/species-meta-climate', get_post_format()); ?>
-   <?php get_template_part('templates/species-meta-badge', get_post_format()); ?>
-   <?php 
-      if ( has_post_thumbnail() ) {
-        the_post_thumbnail('medium');
-      } 
-    ?>
+   <?php get_template_part('templates/species-meta-classification'); ?>
+   <?php get_template_part('templates/species-meta-climate'); ?>
+   <?php get_template_part('templates/species-meta-badge'); ?>
+   <?php get_template_part('templates/species-image'); ?>
  </div>
+ <footer>
+   <?php wp_link_pages(array('before' => '<nav class="page-nav"><p>' . __('Pages:', 'roots'), 'after' => '</p></nav>')); ?>
+ </footer>
 </article>
