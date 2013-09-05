@@ -17,6 +17,12 @@ var ExampleSite = {
         $( this ).find(".glyphicon").toggleClass("glyphicon-chevron-down");
         $( this ).find(".glyphicon").toggleClass("glyphicon-chevron-right");
       });
+      
+      $( ".species-collection article h2" ).click(function() {
+        $( this ).parents("article").slideToggle('fast');
+        $( this ).parents("li").find("a .glyphicon").toggleClass("glyphicon-chevron-down");
+        $( this ).parents("li").find("a .glyphicon").toggleClass("glyphicon-chevron-right");
+      });
     }
   },
   // About page
