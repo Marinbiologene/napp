@@ -13,9 +13,10 @@ var ExampleSite = {
   home: {
     init: function() {
       $( ".species-collection li a" ).click(function() {
-        $( this ).siblings("article").slideDown();
+        $( this ).siblings("article").slideToggle('fast');
+        $( this ).find(".glyphicon").toggleClass("glyphicon-chevron-down");
+        $( this ).find(".glyphicon").toggleClass("glyphicon-chevron-right");
       });
-
     }
   },
   // About page

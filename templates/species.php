@@ -1,6 +1,6 @@
 <li>
 
-  <a class="<?= do_shortcode('[ct id="ct_Classifica_radio_a43a"]') ?>" href="#"><?php the_title(); ?><span></span><span class="pull-right glyphicon glyphicon-chevron-right"></span></i></a>
+  <a class="<?= do_shortcode('[ct id="ct_Classifica_radio_a43a"]') ?>"><?php the_title(); ?><span></span><span class="pull-right glyphicon glyphicon-chevron-right"></span></i></a>
   
   <article <?php post_class(); ?>>
    <header>
