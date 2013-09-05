@@ -9,7 +9,7 @@ Template Name: Seafood List
 <?php global $query_string; // required
 $posts = query_posts($query_string.'&posts_per_page=-1&post_type=species'); ?>
 
-<ul class="seafood-collection nav">
+<ul class="species-collection nav">
   <?php get_template_part('loop'); ?>
 </ul>
 

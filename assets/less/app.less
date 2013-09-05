@@ -45,6 +45,70 @@ body { }
 
 .sidebar { }
 
+/* ==========================================================================
+   Species Collection
+   ========================================================================== */
+
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+@species-border: 1px solid @table-border-color;
+@species-icon-width: 40px;
+@species-padding: 24px;
+
+.species-collection { 
+
+  .border-radius(@border-radius-base);
+  
+  border: @species-border;
+  
+  li {
+  
+    > a {
+    
+      color: @gray-dark;
+      
+      background: url('../img/napp-icon_maybe.png') no-repeat (@species-padding/2); 
+    
+      font-size: ceil(@font-size-base * 1.5);
+      line-height: ceil(@font-size-base * 1.6);
+      min-height: ceil(@font-size-base * 2);
+      border-top: @species-border;
+      
+      padding: @species-padding;
+      padding-left: (@species-padding + @species-icon-width);
+      padding-top: (@species-padding + @species-padding/2);
+      
+      .glyphicon {        
+        font-size: @font-size-small;
+        line-height: ceil(@font-size-base * 1.6);
+        vertical-align: middle;
+      }
+      
+    }
+    
+    > a:hover {
+      color: @gray-light;
+    }
+    
+    article {
+      padding: @species-padding;
+      border-top: @species-border;
+    }
+            
+  }
+  
+  li:first-child {
+    > a {
+      border-top: none;
+    } 
+  }
+}
 
 
 /* ==========================================================================
