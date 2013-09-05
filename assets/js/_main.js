@@ -12,7 +12,10 @@ var ExampleSite = {
   // Home page
   home: {
     init: function() {
-      // JS here
+      $( ".species-collection li a" ).click(function() {
+        $( this ).siblings("article").slideDown();
+      });
+
     }
   },
   // About page
