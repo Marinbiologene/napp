@@ -1,7 +1,7 @@
 <p>
 
   <?php if (do_shortcode('[ct id="ct_Badges_checkbox_110e"]')) : ?>
-    Se etter dette merket:
+    Se etter dette <a href="<?= home_url() ?>/merking">merket</a>:
   <?php endif; ?>
   
 </p>
