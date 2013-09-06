@@ -1,6 +1,6 @@
 <li>
 
-  <a class="<?= do_shortcode('[ct id="ct_Classifica_radio_a43a"]') ?>"><?php the_title(); ?><span></span><span class="pull-right glyphicon glyphicon-chevron-right"></span></i></a>
+  <a class="<?= do_shortcode('[ct id="ct_Classifica_radio_a43a"]') ?>"><?php the_title(); ?><span class="tagline"><?php get_template_part('templates/species-meta-classification-alt1'); ?></span><span class="pull-right glyphicon glyphicon-chevron-right"></span></i></a>
   
   <article <?php post_class(); ?>>
    <header>
@@ -8,7 +8,7 @@
    </header>
    <div class="entry-content">
      <?php the_content(); ?>
-     <?php get_template_part('templates/species-meta-classification'); ?>
+     <?php get_template_part('templates/species-meta-classification-alt2'); ?>
      <?php get_template_part('templates/species-meta-climate'); ?>
      <?php get_template_part('templates/species-meta-badge'); ?>
      <?php get_template_part('templates/species-image'); ?>

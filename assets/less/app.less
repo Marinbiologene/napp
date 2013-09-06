@@ -72,7 +72,9 @@ body {
 
 .species-background(@icon) {
 
-  background: url("../img/napp-icon_@{icon}.png") no-repeat (@species-padding/2); 
+  background-image: url("../img/napp-icon_@{icon}.png"); 
+  background-repeat: no-repeat;
+  background-position: (@species-padding/2) 50%; 
   background-size: 40px 56px;
   
   @media 
@@ -85,6 +87,7 @@ body {
 
 @species-border: 1px solid @table-border-color;
 @species-icon-width: 40px;
+@chevron-icon-width: 14px;
 @species-padding: 24px;
 
 .species-collection { 
@@ -106,11 +109,27 @@ body {
       padding: @species-padding;
       padding-left: (@species-padding + @species-icon-width);
       padding-top: (@species-padding + @species-padding/2);
+      padding-right: (@species-padding + @chevron-icon-width*1.5);
+      
+      position: relative;
+      
+      .tagline {
+        font-size: @font-size-base;
+        color: @gray-light;
+        display: inline-block; 
+        margin-left: (@font-size-base / 2);
+      }
       
       .glyphicon {        
         font-size: @font-size-small;
-        line-height: ceil(@font-size-base * 1.6);
-        vertical-align: middle;
+        position: absolute;
+        margin-top: -3px;
+        top: 50%;
+        right: @species-padding - @chevron-icon-width/2;
+        
+        @media (max-width: @screen-sm) {
+          margin-top: 0;
+        }
       }
       
       &.Green {
@@ -129,6 +148,7 @@ body {
     
     > a:hover {
       color: @gray-light;
+      cursor: pointer;
     }
     
     article {
