@@ -8,7 +8,14 @@
    Base
    ========================================================================== */
 
-body { }
+body {
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+}
 
 
 
@@ -151,7 +158,6 @@ body { }
         padding: 4px;
         .box-shadow();
         border: @species-border;
-        max-width: 100%;
       }
       
       figure.featured figcaption {
@@ -182,7 +188,8 @@ body { }
 .hentry header { }
 .hentry time { }
 .hentry .byline { }
-.hentry .entry-content { }
+.hentry .entry-content {
+}
 .hentry footer { }
 
 
@@ -205,7 +212,13 @@ body { }
 .alignright { float: right; }
 figure.alignnone { margin-left: 0; margin-right: 0; }
 
+.alignleft {
+  margin: (@line-height-computed / 2) @line-height-computed (@line-height-computed / 2) 0;
+}
 
+.alignright {
+  margin: (@line-height-computed / 2) 0 (@line-height-computed / 2) @line-height-computed;
+}
 
 /* ==========================================================================
    Media Queries
