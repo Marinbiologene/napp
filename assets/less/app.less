@@ -10,6 +10,16 @@
 
 body {
 
+  padding-top: @navbar-height;
+  
+  &.admin-bar {
+    padding-top: @navbar-height+28px; /* WP-admin bar is 28 px */
+    
+    .navbar-fixed-top {
+      top: 28px;
+    }
+  }
+
   img {
     max-width: 100%;
     height: auto;
