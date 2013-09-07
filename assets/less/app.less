@@ -25,6 +25,12 @@ body {
     height: auto;
   }
   
+  .tagline {
+    font-size: @font-size-base;
+    color: @gray-light;
+    display: inline-block; 
+  }
+  
 }
 
 
@@ -43,6 +49,7 @@ body {
     background-repeat: no-repeat;
     background-position: 5px 10px;
   }
+  
 }
 
 
@@ -51,7 +58,17 @@ body {
    Content
    ========================================================================== */
 
-.content { }
+.content {
+  
+  .page-header h1 .tagline {
+    
+    &:before {
+      content: "| ";
+    }
+    
+  }
+  
+}
 
 
 
@@ -134,10 +151,11 @@ body {
       position: relative;
       
       .tagline {
-        font-size: @font-size-base;
-        color: @gray-light;
-        display: inline-block; 
         margin-left: (@font-size-base / 2);
+        
+        &:before {
+          content: "— ";
+        }
       }
       
       .glyphicon {        
@@ -186,7 +204,7 @@ body {
         }
         
         strong:before {
-          content: "— "
+          content: "— ";
         }
       }
       
