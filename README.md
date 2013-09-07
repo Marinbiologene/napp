@@ -1,3 +1,8 @@
+Themet er basert på Roots Theme, dvs. at det ikke er like enkelt å bruke som et vanlig theme.
+
+Under er Readme som fulgte med Roots Theme.
+
+
 # [Roots Theme](http://roots.io/)
 
 Roots is a WordPress starter theme based on [HTML5 Boilerplate](http://html5boilerplate.com/) & [Bootstrap](http://getbootstrap.com/) that will help you make better themes.
