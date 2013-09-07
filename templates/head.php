@@ -6,7 +6,18 @@
 <head>
   <meta charset="utf-8">
   <title><?php wp_title('|', true, 'right'); ?></title>
+  <meta name="description" content=<?= get_bloginfo('description')?>>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Facebook open graph image -->
+  <meta property="og:image" content="http://grontnapp.no/app-icons/ios/iTunesArtwork.png"/>
+  
+  <!-- IOS Home Screen Icons -->
+  <link rel="apple-touch-icon" href="<?= get_bloginfo('stylesheet_directory')?>/assets/img/app-icons/ios/Icon.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="<?= get_bloginfo('stylesheet_directory')?>/assets/img/app-icons/ios/Icon-72.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="<?= get_bloginfo('stylesheet_directory')?>/assets/img/app-icons/ios/Icon@2x.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="<?= get_bloginfo('stylesheet_directory')?>/assets/img/app-icons/ios/Icon-72@2x.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
 
   <?php wp_head(); ?>
 
