@@ -4,7 +4,12 @@
   
   <article <?php post_class(); ?>>
    <header>
-     <h2 class="entry-title"><?php the_title(); ?></h2>
+     <h2 class="entry-title">
+       <?php the_title(); ?>
+       <?php if(get_the_terms($post->ID, 'nicknames')) : ?>
+         <span class="tagline"><?php echo the_terms($post->ID, 'nicknames') ?></span>
+       <?php endif; ?>
+     </h2>
    </header>
    <div class="entry-content">
      <?php the_content(); ?>
