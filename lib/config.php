@@ -55,8 +55,7 @@ function roots_display_sidebar() {
      * The second element must be an array even if there's only 1 argument.
      */
     array(
-      'is_404',
-      'is_front_page'
+
     ),
     /**
      * Page template checks (via is_page_template())

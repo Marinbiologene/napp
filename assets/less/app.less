@@ -76,6 +76,11 @@ body {
    ========================================================================== */
 
 .main {
+
+  @media (min-width: @screen-sm) {
+    padding-right: 30px;
+  }
+
   article {
 
     footer {
@@ -149,7 +154,59 @@ body {
    ========================================================================== */
 
 .sidebar {
-  margin: (@line-height-computed * 2) 0 @line-height-computed;
+  @media (min-width: @screen-sm) {
+    padding-left: 30px;
+    border-left: 1px solid @page-header-border-color;
+  }
+
+  h3 {
+    font-size: @font-size-base;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  font-size: @font-size-small;
+
+  ul {
+    margin: 0 0 0 1em;
+    padding: 0;
+
+    li {
+      margin: (@line-height-computed / 2) 0;
+    }
+  }
+
+  .widget_rss {
+    h3 a img {
+      display: none;
+    }
+
+    ul {
+      margin: 0;
+
+      li {
+        list-style: none;
+
+        span, cite, a {
+          display: block;
+        }
+
+        a, div {
+          margin: (@line-height-computed / 4) 0;
+        }
+
+        span, cite, div {
+          font-size: 90%;
+        }
+
+        cite:before {
+          content: "— ";
+        }
+      }
+    }
+  }
 }
 
 /* ==========================================================================
