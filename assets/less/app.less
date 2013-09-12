@@ -11,10 +11,10 @@
 body {
 
   padding-top: @navbar-height;
-  
+
   &.admin-bar {
     padding-top: @navbar-height+28px; /* WP-admin bar is 28 px */
-    
+
     .navbar-fixed-top {
       top: 28px;
     }
@@ -24,13 +24,13 @@ body {
     max-width: 100%;
     height: auto;
   }
-  
+
   .tagline {
     font-size: @font-size-base;
     color: @gray-light;
-    display: inline-block; 
+    display: inline-block;
   }
-  
+
 }
 
 
@@ -39,17 +39,16 @@ body {
    Header
    ========================================================================== */
 
-.banner { 
-  
+.banner {
 
   .navbar-brand {
     padding-left: 15px + 60px;
-    background-image: url("../img/napp-icon_header.png"); 
+    background-image: url("../img/napp-icon_header.png");
     background-size: auto 40px;
     background-repeat: no-repeat;
     background-position: 5px 10px;
   }
-  
+
 }
 
 
@@ -59,15 +58,15 @@ body {
    ========================================================================== */
 
 .content {
-  
+
   .page-header h1 .tagline {
-    
+
     &:before {
       content: "| ";
     }
-    
+
   }
-  
+
 }
 
 
@@ -76,7 +75,53 @@ body {
    Primary Content
    ========================================================================== */
 
-.main { }
+.main {
+  article {
+    &.species {
+
+      blockquote p {
+        font-size: @font-size-base;
+
+        strong {
+          font-size: @font-size-small;
+          font-weight: normal;
+        }
+
+        strong:before {
+          content: "— ";
+        }
+      }
+
+      figure.featured {
+        margin: 0 0 (@line-height-computed / 2);
+      }
+
+      figure.featured img {
+        padding: 4px;
+        .box-shadow();
+        border: @species-border;
+      }
+
+      figure.featured figcaption {
+        padding: (@line-height-computed / 2);
+        font-size: @font-size-small;
+      }
+
+      img.env-badge {
+        height: 70px;
+        padding-right: 10px;
+      }
+
+      .tagline {
+        font-weight: normal;
+
+      &:before {
+        content: "| ";
+      }
+      }
+    }
+  }
+}
 
 /* Gallery Shortcode */
 .gallery-row { padding: 15px 0; }
@@ -87,7 +132,9 @@ body {
    Sidebar
    ========================================================================== */
 
-.sidebar { }
+.sidebar {
+  margin: (@line-height-computed * 2) 0 @line-height-computed;
+}
 
 /* ==========================================================================
    Species Collection
@@ -109,16 +156,16 @@ body {
 
 .species-background(@icon) {
 
-  background-image: url("../img/napp-icon_@{icon}.png"); 
+  background-image: url("../img/napp-icon_@{icon}.png");
   background-repeat: no-repeat;
-  background-position: (@species-padding/2) 50%; 
+  background-position: (@species-padding/2) 50%;
   background-size: 40px 56px;
-  
-  @media 
-  (-webkit-min-device-pixel-ratio: 2), 
-  (min-resolution: 192dpi) { 
+
+  @media
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
     background-image: url("../img/napp-icon@2x_@{icon}.png");
-  
+
   }
 }
 
@@ -127,123 +174,81 @@ body {
 @chevron-icon-width: 14px;
 @species-padding: 24px;
 
-.species-collection { 
+.species-collection {
 
   .border-radius(@border-radius-base);
   border: @species-border;
-  
+
   li {
-  
+
     > a {
-      
+
       color: @gray-dark;
-    
+
       font-size: ceil(@font-size-base * 1.5);
       line-height: ceil(@font-size-base * 1.6);
       min-height: ceil(@font-size-base * 2);
       border-top: @species-border;
-      
+
       padding: @species-padding;
       padding-left: (@species-padding + @species-icon-width);
       padding-top: (@species-padding + @species-padding/2);
       padding-right: (@species-padding + @chevron-icon-width*1.5);
-      
+
       position: relative;
-      
+
       .tagline {
         margin-left: (@font-size-base / 2);
-        
+
         &:before {
           content: "— ";
         }
       }
-      
-      .glyphicon {        
+
+      .glyphicon {
         font-size: @font-size-small;
         position: absolute;
         margin-top: -3px;
         top: 50%;
         right: @species-padding - @chevron-icon-width/2;
-        
+
         @media (max-width: @screen-sm) {
           margin-top: 0;
         }
       }
-      
+
       &.Green {
         .species-background("yes");
       }
-      
+
       &.Orange {
         .species-background("maybe");
       }
-      
+
       &.Red {
         .species-background("no");
       }
-      
+
     }
-    
+
     > a:hover {
       color: @gray-light;
       cursor: pointer;
     }
-    
-    article {
-      display: none;
-    
+
+    article.species {
+        display: none;
+
       padding: @species-padding;
       border-top: @species-border;
-      
-      blockquote p {
-        font-size: @font-size-base;
-        
-        strong {
-          font-size: @font-size-small;
-          font-weight: normal;
-        }
-        
-        strong:before {
-          content: "— ";
-        }
-      }
-      
-      figure.featured {
-        margin: 0 0 (@line-height-computed / 2);
-      }
-      
-      figure.featured img {
-        padding: 4px;
-        .box-shadow();
-        border: @species-border;
-      }
-      
-      figure.featured figcaption {
-        padding: (@line-height-computed / 2);
-        font-size: @font-size-small;
-      }
-      
-      img.env-badge {
-          height: 70px;
-          padding-right: 10px; 
-      }
-      
-      .tagline {
-        font-weight: normal;
-        
-        &:before {
-          content: "| ";
-        }
-      }
-
     }
-            
+
   }
-  
+
   li:first-child {
     > a {
       border-top: none;
-    } 
+    }
   }
 }
 
@@ -265,12 +270,12 @@ body {
    Footer
    ========================================================================== */
 
-.content-info { 
+.content-info {
   padding-top: (@line-height-computed);
   margin-top: (@line-height-computed * 2);
   margin-bottom: (@line-height-computed * 2);
-  border-top: 1px solid @page-header-border-color; 
-  
+  border-top: 1px solid @page-header-border-color;
+
 }
 
 
