@@ -77,6 +77,22 @@ body {
 
 .main {
   article {
+
+    footer {
+      font-size: @font-size-small;
+      margin: @line-height-computed 0 @line-height-computed;
+
+      .entry-meta {
+        margin: @line-height-computed 0 @line-height-computed;
+        padding: ((@line-height-computed / 2) - 1);
+        border-left: 1px solid @page-header-border-color;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+
     &.species {
 
       blockquote p {
