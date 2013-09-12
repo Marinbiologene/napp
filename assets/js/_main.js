@@ -5,13 +5,15 @@ var ExampleSite = {
   // All pages
   common: {
     init: function() {
-      $( ".species-collection li a" ).click(function() {
+      $( ".species-collection li a" ).click(function(event) {
+        event.preventDefault();
         $( this ).siblings("article").slideToggle('fast');
         $( this ).find(".glyphicon").toggleClass("glyphicon-chevron-down");
         $( this ).find(".glyphicon").toggleClass("glyphicon-chevron-right");
       });
 
-      $( ".species-collection article h2" ).click(function() {
+      $( ".species-collection article h2" ).click(function(event) {
+        event.preventDefault();
         $( this ).parents("article").slideToggle('fast');
         $( this ).parents("li").find("a .glyphicon").toggleClass("glyphicon-chevron-down");
         $( this ).parents("li").find("a .glyphicon").toggleClass("glyphicon-chevron-right");
