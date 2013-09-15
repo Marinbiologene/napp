@@ -6,6 +6,6 @@
    <?php elseif(do_shortcode('[ct id="ct_Classifica_radio_a43a"]') == 'Red') : ?>
       <?php the_title(); ?> er på <a href="<?= home_url() ?>/klassifisering">den røde listen</a>; et dårlig valg.
    <?php elseif(do_shortcode('[ct id="ct_Classifica_radio_a43a"]') == 'Gray') : ?>
-      <?php the_title(); ?> er <a href="<?= home_url() ?>/klassifisering">ikke vurdert enda</a>.
+      <?php the_title(); ?> er <a href="<?= home_url() ?>/klassifisering">ikke på noen liste enda</a>.
    <?php endif; ?>
 </p>
