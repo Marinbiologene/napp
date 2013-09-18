@@ -9,6 +9,11 @@
       <h2 class="entry-title">
         <?php get_template_part('templates/species-title'); ?>
       </h2>
+      <p>
+        <?php if (do_shortcode('[ct id="ct_Latin_text_9c2a"]')) : ?>
+          <em class="tagline latin"><?php echo do_shortcode('[ct id="ct_Latin_text_9c2a"]') ?></em>
+        <?php endif; ?>
+      </p>
     </header>
     <div class="entry-content">
       <?php get_template_part('templates/species-content'); ?>

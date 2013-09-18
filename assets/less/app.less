@@ -31,6 +31,13 @@ body {
     font-size: @font-size-base;
     color: @gray-light;
     display: inline-block;
+    font-weight: normal;
+  }
+
+  .page-header {
+    p {
+      margin: 0;
+    }
   }
 
 }
@@ -127,12 +134,8 @@ body {
         padding-right: 10px;
       }
 
-      .tagline {
-        font-weight: normal;
-
-      &:before {
-        content: "| ";
-      }
+      .tagline.nicknames:before {
+          content: "| ";
       }
     }
   }
