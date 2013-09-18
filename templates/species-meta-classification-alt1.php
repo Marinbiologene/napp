@@ -5,5 +5,5 @@ vær kritisk
 <?php elseif(do_shortcode('[ct id="ct_Classifica_radio_a43a"]') == 'Red') : ?>
 et dårlig valg
 <?php elseif(do_shortcode('[ct id="ct_Classifica_radio_a43a"]') == 'Gray') : ?>
-ikke vurdert enda
+foreløpig usikker
 <?php endif; ?>
