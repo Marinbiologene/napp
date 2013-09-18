@@ -13,11 +13,13 @@ body {
   padding-top: @navbar-height;
 
   &.admin-bar {
-    padding-top: @navbar-height+28px; /* WP-admin bar is 28 px */
+
+    position: relative;
 
     .navbar-fixed-top {
-      top: 28px;
+      position: absolute; /* position relative to body, not page */
     }
+
   }
 
   img {
@@ -57,7 +59,9 @@ body {
    Content
    ========================================================================== */
 
-.content { }
+.content {
+  margin-top: @line-height-computed*1.5;
+}
 
 
 
