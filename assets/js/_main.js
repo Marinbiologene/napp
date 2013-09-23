@@ -10,6 +10,8 @@ var ExampleSite = {
         $( this ).siblings("article").slideToggle('fast');
         $( this ).find(".glyphicon").toggleClass("glyphicon-chevron-down");
         $( this ).find(".glyphicon").toggleClass("glyphicon-chevron-right");
+
+        return false;
       });
 
       $( ".species-collection article h2" ).click(function(event) {
@@ -17,6 +19,8 @@ var ExampleSite = {
         $( this ).parents("article").slideToggle('fast');
         $( this ).parents("li").find("a .glyphicon").toggleClass("glyphicon-chevron-down");
         $( this ).parents("li").find("a .glyphicon").toggleClass("glyphicon-chevron-right");
+
+        return false;
       });
     },
     finalize: function() { }
