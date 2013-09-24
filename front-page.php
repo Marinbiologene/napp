@@ -1,10 +1,15 @@
 <section <?php post_class(); ?>>
 
+<header>
+<?php get_template_part('templates/page', 'header'); ?>
+</header>
+
 <?php global $query_string; // required
+
+echo $query_string;
 $posts = query_posts($query_string.'&posts_per_page=-1&post_type=species&orderby=title&order=ASC'); ?>
 
 <ul class="species-collection nav">
-  <li class="species"><?php get_search_form(); ?></li>
   <?php get_template_part('loop'); ?>
 </ul>
 

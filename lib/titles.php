@@ -9,6 +9,8 @@ function roots_title() {
     } else {
       _e('Latest Posts', 'roots');
     }
+  } elseif (is_front_page()) {
+    get_search_form();
   } elseif (is_archive()) {
     $term = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
     if ($term) {
@@ -28,7 +30,7 @@ function roots_title() {
       single_cat_title();
     }
   } elseif (is_search()) {
-    printf(__('Search Results for "%s"', 'roots'), get_search_query());
+    get_search_form();
   } elseif (is_404()) {
     _e('Not Found', 'roots');
   } else {
